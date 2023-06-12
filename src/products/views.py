@@ -2,7 +2,12 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request, 'products/home.html')
+    _context = {
+        'title': 'A-Store',
+        'username': 'Dmitry'
+    }
+
+    return render(request, 'products/home.html', _context)
 
 
 def products(request):
