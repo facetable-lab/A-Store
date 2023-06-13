@@ -1,14 +1,13 @@
 from django.shortcuts import render
 
 
-def home(request):
+def home(_request):
     _context = {
         'title': 'A-Store',
-        'username': 'Dmitry'
     }
 
-    return render(request, 'products/home.html', _context)
+    return render(request=_request, template_name='products/home.html', context=_context)
 
 
-def products(request):
-    return render(request, 'products/products.html')
+def products(_request):
+    return render(request=_request, template_name='products/products.html')
